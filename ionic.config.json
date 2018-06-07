@@ -1,0 +1,8 @@
+{
+  "name": "smartwatch",
+  "app_id": "09c8b34b",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
