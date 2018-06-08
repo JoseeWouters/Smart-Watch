@@ -1,12 +1,9 @@
 page-home {
-    text-align: center;
-}
-.flex {
-    display: flex;
-    justify-content: center;
-}
-.custom-icon {
-    font-size: 5em;
-    color : #e34358;
-    float: right;
+    .container {
+    padding: 25px;
+    }
+    .quote {
+        font-style: italic;
+        text-align: center;
+    }
 }

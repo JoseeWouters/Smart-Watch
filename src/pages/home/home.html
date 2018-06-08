@@ -1,20 +1,33 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Smart Watch
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
-  <p>
-    There's always an answer,
-  </p>
-  <p>
-    you just have to find it.
-  </p>
-
-  <div class="flex">
-    <ion-icon name="speedometer" class="custom-icon"></ion-icon>
+  <div class="container">
+    <p class="quote">
+      There's always an answer, you just have to find it
+    </p>
+    <ul>
+      <li>
+        Stap 1: activeer Bluetooth
+      </li>
+      <li>
+        Stap 2: Connect telefoon met BlueFruit
+      </li>
+    </ul>
+    <ion-buttons end>
+      <button ion-button (click)="scan()">
+        Scan
+      </button>
+    </ion-buttons>
+    <ion-list> 
+      <button ion-item *ngFor="let device of devices" (click)="deviceSelected(device)">
+        <h2>{{ device.name || 'Unnamed' }}</h2>
+        <p>{{ device.id }}</p>
+        <p>RSSI: {{ device.rssi }}</p>
+      </button>  
+     </ion-list> 
   </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p>{{ statusMessage }}</p>
+  </ion-toolbar>
+</ion-footer>
